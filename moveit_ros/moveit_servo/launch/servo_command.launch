@@ -1,0 +1,9 @@
+<launch>
+  
+  <arg name="config" default="$(find moveit_servo)/config/ur10_config.yaml"/>
+
+  <node name="servo_server" pkg="moveit_servo" type="servo_server" output="screen" >
+    <rosparam command="load" file="$(arg config)"/>
+  </node>
+
+</launch>
